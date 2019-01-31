@@ -7,6 +7,6 @@ CREATE TABLE IF NOT EXISTS subscriber (
 CREATE TABLE IF NOT EXISTS subscriber_status (
   id TEXT PRIMARY KEY,
   subscriber TEXT REFERENCES subscriber,
-  verified BOOLEAN DEFAULT FALSE,
+  verified INTEGER DEFAULT 0,
   created INTEGER DEFAULT (strftime('%s', 'now'))
 );
