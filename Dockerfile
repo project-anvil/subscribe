@@ -5,7 +5,7 @@ WORKDIR /app
 COPY . /app
 
 RUN apk add npm nodejs
-RUN npm install
+RUN npm install && npm install sqlite3
 
 ENV PORT 80
 
